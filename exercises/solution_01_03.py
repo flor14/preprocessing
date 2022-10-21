@@ -1,11 +1,8 @@
-import json
+import numpy as np
+import pandas as pd
 
-# This code will run relative to the root of the repo, so we can load files
-with open("exercises/bookquotes.json") as f:
-    DATA = json.loads(f.read())
+from pandas_profiling import ProfileReport
 
-# Print the first record in the DATA
-print(DATA[0])
-
-# Assign the length of DATA to some_var
-some_var = len(DATA)
+column_names = ['ID','clump_thickness','cell_size','cell_shape','adhesion','epithelial_size','bare_nuclei','bland_chromatin','norm_nucleoli','mitoses','class']
+data = pd.read_csv('http://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/breast-cancer-wisconsin.data',names=column_names)
+ProfileReport(data)

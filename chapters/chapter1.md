@@ -1,8 +1,7 @@
 ---
-title: 'Chapter 1: Getting started'
+title: 'ML pipelines'
 description:
-  'This chapter will teach you about many cool things and introduce you to the
-  most important concepts of the course.'
+  'Practice of the basic workflow'
 prev: null
 next: /chapter2
 type: chapter
